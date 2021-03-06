@@ -1,4 +1,4 @@
-form.signup,
+form.signup, 
 form.login {
   margin-top: 50px;
 }
@@ -19,9 +19,18 @@ header {
   margin-bottom: 30px;
 }
 
+.rateBtn,
+.findBtn {
+  text-align: center;
+}
+
 @media screen and (max-width:990px) {
   form.signup {
     padding: 0;
     border: none;
+  }
+
+  .findBtn {
+    margin-top: 25px;
   }
 }
