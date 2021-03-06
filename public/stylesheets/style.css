@@ -3,7 +3,25 @@ form.login {
   margin-top: 50px;
 }
 
-form.login {
-  padding-right: 25px;
-  border-right: solid 2px black;
+form.signup {
+  padding-left: 25px;
+  border-left: solid 2px black;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#headerText {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width:990px) {
+  form.signup {
+    padding: 0;
+    border: none;
+  }
 }
