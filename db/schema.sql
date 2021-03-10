@@ -6,7 +6,7 @@ CREATE DATABASE gottaGO_DB;
 USE gottaGO_DB;
 
 ----- USERS TABLE -----
-CREATE TABLE users (
+CREATE TABLE user (
     id INT NOT NULL AUTO_INCREMENT,
     email VARCHAR(30) NOT NULL,
     password VARCHAR(30) NOT NULL,
