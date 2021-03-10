@@ -23,45 +23,59 @@ module.exports = function(sequelize, DataTypes) {
     },
     changingStation: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     feminineProducts: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     genderNeutral: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     toiletPaper: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     multipleStalls: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     airDryer: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     fancy: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     familyFriendly: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     motionSensors: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     handTowels: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     handSoap: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     clean: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     keyRequired: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     payingCustomer: {
       type: DataTypes.BOOLEAN,
+      defaultValue: false,
     },
     review: {
       type: DataTypes.STRING,

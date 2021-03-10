@@ -54,12 +54,13 @@ module.exports = function(app) {
       review: req.body.review,
     })
       .then(() => {
-        res.redirect(307, "/api/members");
+        window.location.replace("/members");
       })
       .catch(err => {
         res.status(401).json(err);
       });
   });
+
   // Route for logging user out
   app.get("/logout", (req, res) => {
     req.logout();
