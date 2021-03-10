@@ -19,8 +19,8 @@ header {
   margin-bottom: 30px;
 }
 
-.rateBtn,
-.findBtn {
+.rateSection,
+.findSection {
   text-align: center;
 }
 
@@ -30,7 +30,7 @@ header {
     border: none;
   }
 
-  .findBtn {
+  .findSection {
     margin-top: 25px;
   }
 }
