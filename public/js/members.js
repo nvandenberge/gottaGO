@@ -6,12 +6,10 @@ $(document).ready(() => {
   });
 
   $("#rateBtn").on("click", function() {
-    console.log("DIARHHEA");
     window.location.replace("/review");
   });
 
   $("#findBtn").on("click", function() {
-    console.log("DIARHHEA");
     window.location.replace("/results");
   });
 });

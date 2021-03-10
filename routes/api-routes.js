@@ -30,6 +30,36 @@ module.exports = function(app) {
       });
   });
 
+  app.post("/api/review", (req, res) => {
+    db.Review.create({
+      locationName: req.body.locationName,
+      address: req.body.address,
+      state: req.body.state,
+      city: req.body.city,
+      zipCode: req.body.zipCode,
+      changingStation: req.body.changingStation,
+      feminineProducts: req.body.feminineProducts,
+      genderNeutral: req.body.genderNeutral,
+      toiletPaper: req.body.toiletPaper,
+      multipleStalls: req.body.multipleStalls,
+      airDryer: req.body.airDryer,
+      fancy: req.body.fancy,
+      familyFriendly: req.body.familyFriendly,
+      motionSensors: req.body.motionSensors,
+      handTowels: req.body.handTowels,
+      handSoap: req.body.handSoap,
+      clean: req.body.clean,
+      keyRequired: req.body.keyRequired,
+      payingCustomer: req.body.payingCustomer,
+      review: req.body.review,
+    })
+      .then(() => {
+        res.redirect(307, "/api/members");
+      })
+      .catch(err => {
+        res.status(401).json(err);
+      });
+  });
   // Route for logging user out
   app.get("/logout", (req, res) => {
     req.logout();
