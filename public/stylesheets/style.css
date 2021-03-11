@@ -24,6 +24,9 @@ header {
   text-align: center;
 }
 
+.btn {
+  background-color: #663300;
+}
 @media screen and (max-width:990px) {
   form.signup {
     padding: 0;
