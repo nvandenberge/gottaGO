@@ -46,6 +46,7 @@ $(document).ready(() => {
       email: signupEmail.val().trim(),
       password: signupPassword.val().trim()
     };
+    console.log("userData", userData)
 
     if (!userData.email || !userData.password) {
       return;
