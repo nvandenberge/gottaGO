@@ -54,11 +54,8 @@ module.exports = function(app) {
       review: req.body.review,
     })
       .then(() => {
-        window.location.replace("/members");
+        res.redirect("/members");
       })
-      .catch(err => {
-        res.status(401).json(err);
-      });
   });
 
   // Route for logging user out
