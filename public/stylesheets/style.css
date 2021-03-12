@@ -27,6 +27,12 @@ header {
 .btn {
   background-color: #663300;
 }
+
+#findText,
+#reviewText {
+  max-width: 500px;
+}
+
 @media screen and (max-width: 990px) {
   form.signup {
     padding: 0;
@@ -35,5 +41,9 @@ header {
 
   .findSection {
     margin-top: 25px;
+  }
+
+  div.rateBtn {
+    margin-bottom: 50px;
   }
 }
