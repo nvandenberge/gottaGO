@@ -1,4 +1,4 @@
-form.signup, 
+form.signup,
 form.login {
   margin-top: 50px;
 }
@@ -27,7 +27,7 @@ header {
 .btn {
   background-color: #663300;
 }
-@media screen and (max-width:990px) {
+@media screen and (max-width: 990px) {
   form.signup {
     padding: 0;
     border: none;
