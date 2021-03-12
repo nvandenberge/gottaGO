@@ -1,0 +1,91 @@
+<header class="header" style="font-size: larger;">
+    <h1>Find a bathroom</h1>
+</header>
+<main class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div>
+                <p>Search by zip code</p>
+                <input type="text" class="form-control" id="zipInput" placeholder="12345"
+                    style="height: 25px;" width="40px" />
+                <br />
+                <button type="button" class="btn btn-primary" id="refineBtn">
+                    <img src="https://img.icons8.com/ultraviolet/25/000000/toilet-paper.png" />
+                    Refine
+                </button>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3 class="text-center">Results</h3>
+            {{#each reviewData}}
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{locationName}}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{address}} {{city}}, {{state}} {{zipCode}}</h6>
+                            <p class="card-text">{{review}}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <ul class="list-group list-group-flush">
+                        {{#if changingStation}}
+                        <li>Changing Station</li>
+                        {{/if}}
+                        {{#if feminineProducts}}
+                        <li>Feminine Products</li>
+                        {{/if}}
+                        {{#if genderNeutral}}
+                        <li>Feminine Products</li>
+                        {{/if}}
+                        {{#if genderNeutral}}
+                        <li>Feminine Products</li>
+                        {{/if}}
+                        {{#if genderNeutral}}
+                        <li>Feminine Products</li>
+                        {{/if}}
+                        {{#if genderNeutral}}
+                        <li>Gender Neutral</li>
+                        {{/if}}
+                        {{#if toiletPaper}}
+                        <li>Toliet Paper</li>
+                        {{/if}}
+                        {{#if multipleStalls}}
+                        <li>Multiple Stalls</li>
+                        {{/if}}
+                        {{#if airDryer}}
+                        <li>Air Dryer</li>
+                        {{/if}}
+                        {{#if fancy}}
+                        <li>Fancy</li>
+                        {{/if}}
+                        {{#if familyFriendly}}
+                        <li>Family Friendly</li>
+                        {{/if}}
+                        {{#if motionSensors}}
+                        <li>Motion Sensors</li>
+                        {{/if}}
+                        {{#if handTowels}}
+                        <li>Hand Towels</li>
+                        {{/if}}
+                        {{#if handSoap}}
+                        <li>Hand Soap</li>
+                        {{/if}}
+                        {{#if clean}}
+                        <li>Clean</li>
+                        {{/if}}
+                        {{#if keyRequired}}
+                        <li>Key Required</li>
+                        {{/if}}
+                        {{#if payingCustomer}}
+                        <li>Paying Customers Only</li>
+                        {{/if}}
+                    </ul>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    </div>
+</main>
