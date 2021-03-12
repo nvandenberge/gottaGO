@@ -4,6 +4,6 @@ $(document).ready(() => {
     refineBtn.on("click", (e) => {
         const zipCode = $("#zipInput").val().trim();
         console.log('hello')
-        window.location.href = `/results?zipCode=${zipCode}`
+        window.location.replace(`/results?zipCode=${zipCode}`);
     })
 });

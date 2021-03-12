@@ -18,34 +18,33 @@
 
   <body>
     <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header"></div>
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/logout">
+          Logout
+        </a>
       </div>
     </nav>
     <div class="container">
       <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-          <h2>Write Your Review</h2>
           <form class="row" id="reviewForm">
-            <div class="col-12">
+            <h2>Write Your Review</h2>
               <label for="inputAddress" class="form-label"
-                >Name of Business/Location</label
+                >Name of Business / Location</label
               >
               <input
                 type="text"
                 class="form-control"
                 id="inputAddress"
-                placeholder="1234 Main St"
+                placeholder="Business Name"
                 name="locationName"
               />
-            </div>
             <div>
               <label for="inputAddress2" class="form-label">Address</label>
               <input
                 type="text"
-                class="form-control"
+                class="form-control mb-2"
                 id="inputAddress2"
-                placeholder="Apartment, studio, or floor"
+                placeholder="1234 Main St"
                 name="address"
               />
             </div>
@@ -58,9 +57,9 @@
                 name="city"
               />
             </div>
-            <div>
+            <div id="inputState">
               <label for="inputState" class="form-label">State</label>
-              <option value="" disabled selected></option>
+              <br>
               <!--states-->
               <select id="inputState" class="form-select" name="state">
                 <option selected>Choose your State</option>
@@ -306,8 +305,9 @@
                   <textarea
                     id="review"
                     rows="10"
-                    cols="100"
+                    cols="85"
                     name="review"
+                    placeholder="My bathroom expierience was...."
                   ></textarea>
                 </div>
               </div>
@@ -330,7 +330,6 @@
               </button>
             </div>
           </form>
-        </div>
       </div>
     </div>
 

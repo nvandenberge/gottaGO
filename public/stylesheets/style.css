@@ -28,11 +28,71 @@ header {
   background-color: #663300;
 }
 
+#submitReviewBtn {
+  margin: 25px 0 20px 0;
+}
+
 #findText,
 #reviewText {
   max-width: 500px;
 }
 
+#reviewForm {
+  max-width: 500px;
+}
+
+#inputZip,
+#zipInput {
+  max-width: 200px;
+}
+
+#inputAddress,
+#inputAddress2,
+#inputCity,
+#inputState,
+#inputZip,
+#review {
+  margin-bottom: 15px;
+}
+
+#review {
+  margin-top: 15px;
+}
+
+#refineBtn {
+  max-width: 150px;
+  margin-bottom: 25px;
+  padding: 8px;
+}
+
+.form-label {
+  margin-bottom: 0;
+}
+
+.resultCard {
+  border: 1px black solid;
+  max-width: 500px;
+  border-radius: 5px;
+  min-height: 200px;
+}
+
+.searchDiv,
+.resultsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  border: none;
+}
+
+.address {
+  font-size: small;
+}
+
+/* Apply this styling when screen size is smaller than 990px */
 @media screen and (max-width: 990px) {
   form.signup {
     padding: 0;
@@ -43,7 +103,22 @@ header {
     margin-top: 25px;
   }
 
+  #reviewForm {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
   div.rateBtn {
     margin-bottom: 50px;
+  }
+
+  .searchDiv {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bathroomOptions {
+    margin-left: 20px;
   }
 }
