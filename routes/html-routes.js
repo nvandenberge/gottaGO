@@ -1,5 +1,6 @@
 // Requiring path to so we can use relative routes to our HTML files
 const path = require("path");
+const db = require("../models");
 
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require("../config/middleware/isAuthenticated");
@@ -31,8 +32,16 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/review.html"));
   });
 
-  app.get("/results", (req, res) => {
-    res.sendFile(path.join(__dirname, "../public/results.html"));
+  app.get("/results", async (req, res) => {
+    const zipCode = req.query.zipCode;
+    console.log('req.params ==', req.params)
+    console.log('zipCode ===', zipCode)
+    const reviewData = await db.Review.findAll({
+      where: {zipCode: zipCode || ''} 
+    })
+    // console.log('reviewData ===', reviewData)
+
+    res.render("index", {reviewData: reviewData.map((review) => review.dataValues)})
   });
 };
 
