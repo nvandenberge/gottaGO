@@ -80,6 +80,9 @@ module.exports = function(sequelize, DataTypes) {
     review: {
       type: DataTypes.STRING,
     },
+    starRating: {
+      type: DataTypes.INTEGER,
+    }
   });
   return Review;
 };

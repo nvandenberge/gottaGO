@@ -26,6 +26,7 @@ module.exports = function(app) {
         res.redirect(307, "/api/login");
       })
       .catch(err => {
+        console.log('Error signing Up -', err)
         res.status(401).json(err);
       });
   });
@@ -52,6 +53,7 @@ module.exports = function(app) {
       keyRequired: req.body.keyRequired,
       payingCustomer: req.body.payingCustomer,
       review: req.body.review,
+      starRating: req.body.starRating,
     })
       .then(() => {
         res.redirect("/members");
