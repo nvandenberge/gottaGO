@@ -25,7 +25,8 @@ module.exports = function(app) {
       .then(() => {
         res.redirect(307, "/api/login");
       })
-      .catch((err) => {
+      .catch(err => {
+        console.log('Error signing Up -', err)
         res.status(401).json(err);
       });
   });
@@ -52,9 +53,11 @@ module.exports = function(app) {
       keyRequired: req.body.keyRequired,
       payingCustomer: req.body.payingCustomer,
       review: req.body.review,
-    }).then(() => {
-      res.redirect("/members");
-    });
+      starRating: req.body.starRating,
+    })
+      .then(() => {
+        res.redirect("/members");
+      })
   });
 
   app.get("/api/results/:zipCode", (req, res) => {
