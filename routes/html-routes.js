@@ -46,6 +46,6 @@ module.exports = function(app) {
     });
   });
   app.get("*", function(req, res) {
-    res.redirect("/login", 404);
+    res.redirect("/login");
   });
 };
