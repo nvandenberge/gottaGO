@@ -1,12 +1,4 @@
-/* body {
-  margin:0;
-  padding:0;
-  height:100%;
-}
-.container {
-  min-height:100%;
-  position:relative;
-} */
+
 
 form.signup,
 form.login {
@@ -52,17 +44,6 @@ header {
   background-color: #663300;
 }
 
-.site-footer {
-
-  padding-top: 25px;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  text-align: center;
-  color: antiquewhite;
-  background-color: #663300;
-  margin-top: 25px;
-}
 
 
 #findText,
