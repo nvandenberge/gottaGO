@@ -1,3 +1,4 @@
+
 form.signup, 
 form.login {
   margin-top: 50px;
@@ -33,9 +34,16 @@ header {
 }
 
 .site-footer {
+  padding-top: 25px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
   color: antiquewhite;
   background-color: #663300;
+  margin-top: 25px;
 }
+
 @media screen and (max-width:990px) {
   form.signup {
     padding: 0;
