@@ -34,15 +34,18 @@ module.exports = function(app) {
 
   app.get("/results", async (req, res) => {
     const zipCode = req.query.zipCode;
-    console.log('req.params ==', req.params)
-    console.log('zipCode ===', zipCode)
+    console.log("req.params ==", req.params);
+    console.log("zipCode ===", zipCode);
     const reviewData = await db.Review.findAll({
-      where: {zipCode: zipCode || ''} 
-    })
+      where: { zipCode: zipCode || "" },
+    });
     // console.log('reviewData ===', reviewData)
 
-    res.render("index", {reviewData: reviewData.map((review) => review.dataValues)})
+    res.render("index", {
+      reviewData: reviewData.map((review) => review.dataValues),
+    });
+  });
+  app.get("*", function(req, res) {
+    res.redirect("/login", 404);
   });
 };
-
-
