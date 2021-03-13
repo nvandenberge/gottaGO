@@ -25,8 +25,8 @@ module.exports = function(app) {
       .then(() => {
         res.redirect(307, "/api/login");
       })
-      .catch(err => {
-        console.log('Error signing Up -', err)
+      .catch((err) => {
+        console.log("Error signing Up -", err);
         res.status(401).json(err);
       });
   });
@@ -54,10 +54,9 @@ module.exports = function(app) {
       payingCustomer: req.body.payingCustomer,
       review: req.body.review,
       starRating: req.body.starRating,
-    })
-      .then(() => {
-        res.redirect("/members");
-      })
+    }).then(() => {
+      res.redirect("/members");
+    });
   });
 
   app.get("/api/results/:zipCode", (req, res) => {
@@ -71,7 +70,7 @@ module.exports = function(app) {
   // Route for logging user out
   app.get("/logout", (req, res) => {
     req.logout();
-    res.redirect("/");
+    res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
   // Route for getting some data about our user to be used client side
