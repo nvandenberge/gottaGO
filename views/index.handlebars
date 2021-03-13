@@ -3,15 +3,15 @@
 </header>
 <main class="container">
     <div class="row resultsDiv">
-            <div class="searchDiv">
-                <p>Search by zip code</p>
-                <input type="text" class="form-control text-center" id="zipInput" placeholder="12345" />
-                <br />
-                <button type="button" class="btn btn-primary" id="refineBtn">
-                    <img src="https://img.icons8.com/ultraviolet/25/000000/toilet-paper.png" />
-                    Refine
-                </button>
-            </div>
+        <div class="searchDiv">
+            <p>Search by zip code</p>
+            <input type="text" class="form-control text-center" id="zipInput" placeholder="12345" />
+            <br />
+            <button type="button" class="btn btn-primary" id="refineBtn">
+                <img src="https://img.icons8.com/ultraviolet/25/000000/toilet-paper.png" />
+                Refine
+            </button>
+        </div>
         <div class="">
             {{#if reviewData}}
             <h3 class="text-center">Results</h3>
@@ -23,11 +23,14 @@
                         <div class="card-body">
                             <h5 class="card-title">{{locationName}}</h5>
                             <div class="card-subtitle mb-2 text-muted">{{address}} {{city}}, {{state}} {{zipCode}}</div>
+                            {{#if starRating}}
+                            <div>Rating: {{starRating}} / 5</div>
+                            {{/if}}
                             <p class="card-text">{{review}}</p>
                         </div>
                     </div>
                 </div>
-                {{!-- Because of the way we set up our database, we needed to use 
+                {{!-- Because of the way we set up our database, we needed to use
                 if statements to check each option for 'true' --}}
                 <div class="col-md-6 bathroomOptions">
                     <ul class="list-group ml-3 card-body">
@@ -35,15 +38,6 @@
                         <li>Changing Station</li>
                         {{/if}}
                         {{#if feminineProducts}}
-                        <li>Feminine Products</li>
-                        {{/if}}
-                        {{#if genderNeutral}}
-                        <li>Feminine Products</li>
-                        {{/if}}
-                        {{#if genderNeutral}}
-                        <li>Feminine Products</li>
-                        {{/if}}
-                        {{#if genderNeutral}}
                         <li>Feminine Products</li>
                         {{/if}}
                         {{#if genderNeutral}}
@@ -86,6 +80,6 @@
                 </div>
             </div>
             {{/each}}
-    </div>
+        </div>
     </div>
 </main>

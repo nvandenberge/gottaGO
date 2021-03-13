@@ -52,6 +52,7 @@ module.exports = function(app) {
       keyRequired: req.body.keyRequired,
       payingCustomer: req.body.payingCustomer,
       review: req.body.review,
+      starRating: req.body.starRating,
     })
       .then(() => {
         res.redirect("/members");
