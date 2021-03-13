@@ -8,6 +8,10 @@ form.signup {
   border-left: solid 2px black;
 }
 
+#review-form {
+  padding-bottom: 50px;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -25,6 +29,11 @@ header {
 }
 
 .btn {
+  background-color: #663300;
+}
+
+.site-footer {
+  color: antiquewhite;
   background-color: #663300;
 }
 @media screen and (max-width:990px) {
