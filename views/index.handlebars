@@ -1,35 +1,36 @@
-<header class="header" style="font-size: larger;">
-    <h1>Find a bathroom</h1>
+<header class="header">
+    <h1 class="mt-3 mb-4">Find a bathroom</h1>
 </header>
 <main class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div>
+    <div class="row resultsDiv">
+            <div class="searchDiv">
                 <p>Search by zip code</p>
-                <input type="text" class="form-control" id="zipInput" placeholder="12345"
-                    style="height: 25px;" width="40px" />
+                <input type="text" class="form-control text-center" id="zipInput" placeholder="12345" />
                 <br />
                 <button type="button" class="btn btn-primary" id="refineBtn">
                     <img src="https://img.icons8.com/ultraviolet/25/000000/toilet-paper.png" />
                     Refine
                 </button>
             </div>
-        </div>
-        <div class="col-md-6">
+        <div class="">
+            {{#if reviewData}}
             <h3 class="text-center">Results</h3>
+            {{/if}}
             {{#each reviewData}}
-            <div class="row">
+            <div class="row resultCard mb-2">
                 <div class="col-md-6">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">{{locationName}}</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">{{address}} {{city}}, {{state}} {{zipCode}}</h6>
+                            <div class="card-subtitle mb-2 text-muted">{{address}} {{city}}, {{state}} {{zipCode}}</div>
                             <p class="card-text">{{review}}</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <ul class="list-group list-group-flush">
+                {{!-- Because of the way we set up our database, we needed to use 
+                if statements to check each option for 'true' --}}
+                <div class="col-md-6 bathroomOptions">
+                    <ul class="list-group ml-3 card-body">
                         {{#if changingStation}}
                         <li>Changing Station</li>
                         {{/if}}
@@ -79,13 +80,12 @@
                         <li>Key Required</li>
                         {{/if}}
                         {{#if payingCustomer}}
-                        <li>Paying Customers Only</li>
+                        <li>Purchase Required</li>
                         {{/if}}
                     </ul>
                 </div>
             </div>
             {{/each}}
-        </div>
     </div>
     </div>
 </main>

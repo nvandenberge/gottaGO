@@ -4,35 +4,30 @@
     <title>gottaGO-Welcome</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link href="stylesheets/style.css" rel="stylesheet" />
   </head>
 
   <body>
     <nav class="navbar navbar-default">
-      <!-- <div class="container"> -->
       <div class="navbar-header">
         <a class="navbar-brand" href="/logout">
           Logout
         </a>
       </div>
-    </div>
-    <div class="row">
+    </nav>
+<div class="container">
       <header>
         <div>
           <img src="/img/batman.png" alt="fake batman holding a plunger">
         </div>
       </header>
       <div id="headerText">its like Yelp....but for toliets</div>
-    </div>
     <div class="row">
       <div class="col-md-6">
         <div class="rateBtn">
           <h3>Share Your Experience</h3>
-          <p>
+          <p id="reviewText">
             Answer the call of duty and share your recent bathroom experience. Was it clean? Was there a changing station? Or maybe it is an experience you hope no one else will ever have to endure. Drop your number two review to help people find a #1 Bathroom Experience.
           </p>
           <button id="rateBtn" type="button" class="btn btn-primary btn-lg">Rate and Review<img
@@ -40,10 +35,9 @@
         </div>
       </div>
       <div class="col-md-6">
-        
         <div class="findBtn">
           <h3>Potty Perusal</h3>
-          <p>
+          <p id="findText">
             Search for a restroom that is sure to meet your standard of excellence and cleanliness. Prefer air-dryers? Maybe you need a family friendly bathroom. Thanks to gottaGO, when you have a doozy of a twoozy you've got time to be choosey.
           </p>
           <button id="findBtn" type="button" class="btn btn-primary btn-lg">Find a Bathroom<img
