@@ -1,3 +1,13 @@
+/* body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+.container {
+  min-height:100%;
+  position:relative;
+} */
+
 form.signup,
 form.login {
   margin-top: 50px;
@@ -6,6 +16,10 @@ form.login {
 form.signup {
   padding-left: 25px;
   border-left: solid 2px black;
+}
+
+#review-form {
+  padding-bottom: 50px;
 }
 
 header {
@@ -37,6 +51,19 @@ header {
 .btn {
   background-color: #663300;
 }
+
+.site-footer {
+
+  padding-top: 25px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: antiquewhite;
+  background-color: #663300;
+  margin-top: 25px;
+}
+
 
 #findText,
 #reviewText {
@@ -127,6 +154,11 @@ header {
   .searchDiv {
     margin-bottom: 30px;
   }
+}
+
+#results-logout {
+  position: fixed;
+  float: left;
 }
 
 @media screen and (max-width: 768px) {
