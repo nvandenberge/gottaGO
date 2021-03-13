@@ -1,15 +1,18 @@
 $(document).ready(() => {
   // Getting references to our form and inputs
   const loginForm = $("form.login");
-  const emailInput = $("input#email-input");
-  const passwordInput = $("input#password-input");
+  const loginEmail = $("input#login-email");
+  const loginPassword = $("input#login-password");
+  const signUpForm = $("form.signup");
+  const signupEmail = $("input#signup-email");
+  const signupPassword = $("input#signup-password");
 
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", event => {
     event.preventDefault();
     const userData = {
-      email: emailInput.val().trim(),
-      password: passwordInput.val().trim()
+      email: loginEmail.val().trim(),
+      password: loginPassword.val().trim()
     };
 
     if (!userData.email || !userData.password) {
@@ -18,8 +21,8 @@ $(document).ready(() => {
 
     // If we have an email and password we run the loginUser function and clear the form
     loginUser(userData.email, userData.password);
-    emailInput.val("");
-    passwordInput.val("");
+    loginEmail.val("");
+    loginPassword.val("");
   });
 
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
@@ -35,5 +38,41 @@ $(document).ready(() => {
       .catch(err => {
         console.log(err);
       });
+  }
+   // When the signup button is clicked, we validate the email and password are not blank
+   signUpForm.on("submit", event => {
+    event.preventDefault();
+    const userData = {
+      email: signupEmail.val().trim(),
+      password: signupPassword.val().trim()
+    };
+    console.log("userData", userData)
+
+    if (!userData.email || !userData.password) {
+      return;
+    }
+    // If we have an email and password, run the signUpUser function
+    signUpUser(userData.email, userData.password);
+    signupEmail.val("");
+    signupPassword.val("");
+  });
+
+  // Does a post to the signup route. If successful, we are redirected to the members page
+  // Otherwise we log any errors
+  function signUpUser(email, password) {
+    $.post("/api/signup", {
+      email: email,
+      password: password
+    })
+      .then(() => {
+        window.location.replace("/members");
+        // If there's an error, handle it by throwing up a bootstrap alert
+      })
+      .catch(handleLoginErr);
+  }
+
+  function handleLoginErr(err) {
+    $("#alert .msg").text(err.responseJSON);
+    $("#alert").fadeIn(500);
   }
 });

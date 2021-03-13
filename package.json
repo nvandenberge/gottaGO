@@ -1,5 +1,5 @@
 {
-  "name": "1-Passport-Example",
+  "name": "gottaGO",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -16,8 +16,11 @@
   "dependencies": {
     "bcryptjs": "2.4.3",
     "express": "^4.17.0",
+    "express-handlebars": "^5.2.1",
     "express-session": "^1.16.1",
+    "jquery-bar-rating": "^1.2.2",
     "mysql2": "^1.6.5",
+    "ng-starrating": "^1.0.20",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
     "sequelize": "^5.8.6"

@@ -1,5 +1,14 @@
+/* body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+.container {
+  min-height:100%;
+  position:relative;
+} */
 
-form.signup, 
+form.signup,
 form.login {
   margin-top: 50px;
 }
@@ -17,15 +26,25 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 #headerText {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
+} 
+
+.rateSection,
+.findSection {
+  text-align: center;
 }
 
 .rateBtn,
 .findBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
 }
 
@@ -34,6 +53,7 @@ header {
 }
 
 .site-footer {
+
   padding-top: 25px;
   left: 0;
   bottom: 0;
@@ -44,13 +64,105 @@ header {
   margin-top: 25px;
 }
 
-@media screen and (max-width:990px) {
+
+#findText,
+#reviewText {
+  max-width: 500px;
+}
+
+#review {
+  max-width: 95%;
+}
+
+#reviewForm {
+  max-width: 550px;
+  flex-direction: column;
+}
+
+.reviewPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#inputZip,
+#zipInput {
+  max-width: 175px;
+}
+
+#inputState {
+  height: 36px;
+  border-radius: 3px;
+  max-width: 175px;
+  padding: 6px;
+}
+
+#refineBtn {
+  max-width: 150px;
+  margin-bottom: 25px;
+  padding: 8px;
+}
+
+.form-label {
+  margin-bottom: 0;
+}
+
+.resultCard {
+  border: 1px black solid;
+  max-width: 500px;
+  border-radius: 5px;
+  min-height: 200px;
+}
+
+.searchDiv,
+.resultsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card {
+  border: none;
+}
+
+.address {
+  font-size: small;
+}
+
+/* Apply this styling when screen size is smaller than 990px */
+@media screen and (max-width: 990px) {
   form.signup {
     padding: 0;
     border: none;
   }
 
-  .findBtn {
+  .findSection {
     margin-top: 25px;
+  }
+
+  #reviewForm {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  div.rateBtn {
+    margin-bottom: 50px;
+  }
+
+  .searchDiv {
+    margin-bottom: 30px;
+  }
+}
+
+#results-logout {
+  position: fixed;
+  float: left;
+}
+
+@media screen and (max-width: 768px) {
+  .bathroomOptions {
+    margin-left: 20px;
   }
 }

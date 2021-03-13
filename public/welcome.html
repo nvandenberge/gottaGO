@@ -1,59 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>gottaGO-Welcome</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link href="stylesheets/style.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <title>gottaGO-Welcome</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-  integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-<link href="stylesheets/style.css" rel="stylesheet">
-  <link href="stylesheets/style.css" rel="stylesheet">
-</head>
-
-<body>
-  <nav class="navbar navbar-default">
-    <!-- <div class="container"> -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/logout">
-        Logout
-      </a>
-    </div>
-    <!-- </div> -->
-  </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <h2>Welcome <span class="member-name"></span></h2>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/logout">
+          Logout
+        </a>
       </div>
-    </div>
-    <div class="row">
+    </nav>
+<div class="container">
       <header>
         <div>
-          <img src="/public/img/batman.png" alt="fake batman holding a plunger">
+          <img src="/img/batman.png" alt="fake batman holding a plunger">
         </div>
       </header>
       <div id="headerText">its like Yelp....but for toliets</div>
-    </div>
     <div class="row">
       <div class="col-md-6">
         <div class="rateBtn">
           <h3>Share Your Experience</h3>
-          <p>
+          <p id="reviewText">
             Answer the call of duty and share your recent bathroom experience. Was it clean? Was there a changing station? Or maybe it is an experience you hope no one else will ever have to endure. Drop your number two review to help people find a #1 Bathroom Experience.
           </p>
-          <button type="button" class="btn btn-primary btn-lg">Rate and Review<img
+          <button id="rateBtn" type="button" class="btn btn-primary btn-lg">Rate and Review<img
               src="https://img.icons8.com/emoji/48/000000/toilet-emoj.png" /></button>
         </div>
       </div>
       <div class="col-md-6">
-        
         <div class="findBtn">
           <h3>Potty Perusal</h3>
-          <p>
+          <p id="findText">
             Search for a restroom that is sure to meet your standard of excellence and cleanliness. Prefer air-dryers? Maybe you need a family friendly bathroom. Thanks to gottaGO, when you have a doozy of a twoozy you've got time to be choosey.
           </p>
-          <button type="button" class="btn btn-primary btn-lg">Find a Bathroom<img
+          <button id="findBtn" type="button" class="btn btn-primary btn-lg">Find a Bathroom<img
               src="https://img.icons8.com/emoji/48/000000/toilet-emoj.png" /></button>
         </div>
       </div>
@@ -89,9 +76,8 @@
       </div>
     </div>
   </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/members.js"></script>
-
-</body>
-
+ 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/members.js"></script>
+  </body>
 </html>
