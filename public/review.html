@@ -4,13 +4,16 @@
     <title>gottaGO-Review</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <link href="stylesheets/style.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="stylesheets/bars-movie.css" />
+    <link rel="stylesheet" href="stylesheets/css-stars.css" />
   </head>
 
   <body>
@@ -23,294 +26,295 @@
     </nav>
     <div class="container reviewPage">
       <div class="row">
-          <form class="row" id="reviewForm">
-            <h2 class="mt-3 mb-4">Write Your Review</h2>
-              <label for="inputAddress" class="form-label"
-                >Name of Business / Location</label
-              >
-              <input
-                type="text"
-                class="form-control mb-3 w-75"
-                id="inputAddress"
-                placeholder="Business Name"
-                name="locationName"
-              />
-            <div>
-              <label for="inputAddress2" class="form-label">Address</label>
-              <input
-                type="text"
-                class="form-control mb-3 w-75"
-                id="inputAddress2"
-                placeholder="1234 Main St"
-                name="address"
-              />
-            </div>
-            <div>
-              <label for="inputCity" class="form-label">City</label>
-              <input
-                type="text"
-                class="form-control mb-3 w-75"
-                id="inputCity"
-                name="city"
-              />
-            </div>
-            <div id="inputState mb-3">
-              <label for="inputState" class="form-label">State</label>
-              <br>
-              <!--States-->
-              <select id="inputState" class="form-select mb-3" name="state">
-                <option selected>Choose your State</option>
-                <option value="Alabama"> Alabama</option>
-                <option value="Alaska"> Alaska</option>
-                <option value="Arizona"> Arizona</option>
-                <option value="Arkansas"> Arkansas</option>
-                <option value="California"> California</option>
-                <option value="Colorado"> Colorado</option>
-                <option value="Connecticut"> Connecticut</option>
-                <option value="Deleware"> Deleware</option>
-                <option value="Florida"> Florida</option>
-                <option value="Georgia"> Georgia</option>
-                <option value="Hawaii"> Hawaii</option>
-                <option value="Idaho"> Idaho</option>
-                <option value="Illinois"> Illinois</option>
-                <option value="Indiana"> Indiana</option>
-                <option value="Iowa"> Iowa</option>
-                <option value="Kansas"> Kansas</option>
-                <option value="Kentucky"> Kentucky</option>
-                <option value="Louisiana"> Louisiana</option>
-                <option value="Maine"> Maine</option>
-                <option value="Maryland"> Maryland</option>
-                <option value="Massachussetts"> Massachussetts</option>
-                <option value="Michigan"> Michigan</option>
-                <option value="Minnesota"> Minnesota</option>
-                <option value="Mississippi"> Mississippi</option>
-                <option value="Missiouri"> Missiouri</option>
-                <option value="Montana"> Montana</option>
-                <option value="Nebraska"> Nebraska</option>
-                <option value="Nevada"> Nevada</option>
-                <option value="New Hampshire"> New Hampshire</option>
-                <option value="New Jersey"> New Jersey</option>
-                <option value="New Mexico"> New Mexico</option>
-                <option value="New York"> New York</option>
-                <option value="North Carolina"> North Carolina</option>
-                <option value="North Dakota"> North Dakota</option>
-                <option value="Ohio"> Ohio</option>
-                <option value="Oklahoma"> Oklahoma</option>
-                <option value="Oregon"> Oregon</option>
-                <option value="Pennsylvania"> Pennsylvania</option>
-                <option value="Rhode Island"> Rhode Island</option>
-                <option value="South Caolina"> South Caolina</option>
-                <option value="South Dakota"> South Dakota</option>
-                <option value="Tennessee"> Tennessee</option>
-                <option value="Texas"> Texas</option>
-                <option value="Utah"> Utah</option>
-                <option value="Vermont"> Vermont</option>
-                <option value="Virginia"> Virginia</option>
-                <option value="Washington"> Washington</option>
-                <option value="West Virginia"> West Virginia</option>
-                <option value="Wisconsin"> Wisconsin</option>
-                <option value="Wyoming"> Wyoming</option>
-              </select>
-            </div>
-            <div>
-              <label for="inputZip" class="form-label">Zip</label>
-              <input
-                type="text"
-                class="form-control mb-3"
-                id="inputZip"
-                name="zipCode"
-              />
-            </div>
-            <div>
-              <!-- Bathroom Amenities -->
-              <div class="row ml-2">
-                  <div class="col-md-4">
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="changingStation"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Changing Station
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="feminineProducts"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Feminine Products
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="genderNeutral"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Gender Neutral
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="toiletPaper"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Toilet Paper
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="multipleStalls"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Multiple Stalls
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="airDryer"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Air Dryer
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="fancy"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Fancy
-                      </label>
-                    </div>
-                  </div>
-                  <div class="col-md-4">
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="familyFriendly"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Family Friendly
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="motionSensors"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Motion Sensors
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="handTowels"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Hand Towels
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="handSoap"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Hand Soap
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="clean"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Clean
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="keyRequired"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Key Required
-                      </label>
-                    </div>
-                    <div>
-                      <input
-                        class="form-check-input"
-                        type="checkbox"
-                        id="gridCheck"
-                        name="payingCustomer"
-                        value="true"
-                      />
-                      <label class="form-check-label" for="gridCheck">
-                        Purchase Required
-                      </label>
-                    </div>
-                  </div>
+        <form class="row" id="reviewForm">
+          <h2 class="mt-3 mb-4">Write Your Review</h2>
+          <label for="inputAddress" class="form-label"
+            >Name of Business / Location</label
+          >
+          <input
+            type="text"
+            class="form-control mb-3 w-75"
+            id="inputAddress"
+            placeholder="Business Name"
+            name="locationName"
+          />
+          <div>
+            <label for="inputAddress2" class="form-label">Address</label>
+            <input
+              type="text"
+              class="form-control mb-3 w-75"
+              id="inputAddress2"
+              placeholder="1234 Main St"
+              name="address"
+            />
+          </div>
+          <div>
+            <label for="inputCity" class="form-label">City</label>
+            <input
+              type="text"
+              class="form-control mb-3 w-75"
+              id="inputCity"
+              name="city"
+            />
+          </div>
+          <div id="inputState mb-3">
+            <label for="inputState" class="form-label">State</label>
+            <br />
+            <!--States-->
+            <select id="inputState" class="form-select mb-3" name="state">
+              <option selected>Choose your State</option>
+              <option value="Alabama"> Alabama</option>
+              <option value="Alaska"> Alaska</option>
+              <option value="Arizona"> Arizona</option>
+              <option value="Arkansas"> Arkansas</option>
+              <option value="California"> California</option>
+              <option value="Colorado"> Colorado</option>
+              <option value="Connecticut"> Connecticut</option>
+              <option value="Deleware"> Deleware</option>
+              <option value="Florida"> Florida</option>
+              <option value="Georgia"> Georgia</option>
+              <option value="Hawaii"> Hawaii</option>
+              <option value="Idaho"> Idaho</option>
+              <option value="Illinois"> Illinois</option>
+              <option value="Indiana"> Indiana</option>
+              <option value="Iowa"> Iowa</option>
+              <option value="Kansas"> Kansas</option>
+              <option value="Kentucky"> Kentucky</option>
+              <option value="Louisiana"> Louisiana</option>
+              <option value="Maine"> Maine</option>
+              <option value="Maryland"> Maryland</option>
+              <option value="Massachussetts"> Massachussetts</option>
+              <option value="Michigan"> Michigan</option>
+              <option value="Minnesota"> Minnesota</option>
+              <option value="Mississippi"> Mississippi</option>
+              <option value="Missiouri"> Missiouri</option>
+              <option value="Montana"> Montana</option>
+              <option value="Nebraska"> Nebraska</option>
+              <option value="Nevada"> Nevada</option>
+              <option value="New Hampshire"> New Hampshire</option>
+              <option value="New Jersey"> New Jersey</option>
+              <option value="New Mexico"> New Mexico</option>
+              <option value="New York"> New York</option>
+              <option value="North Carolina"> North Carolina</option>
+              <option value="North Dakota"> North Dakota</option>
+              <option value="Ohio"> Ohio</option>
+              <option value="Oklahoma"> Oklahoma</option>
+              <option value="Oregon"> Oregon</option>
+              <option value="Pennsylvania"> Pennsylvania</option>
+              <option value="Rhode Island"> Rhode Island</option>
+              <option value="South Caolina"> South Caolina</option>
+              <option value="South Dakota"> South Dakota</option>
+              <option value="Tennessee"> Tennessee</option>
+              <option value="Texas"> Texas</option>
+              <option value="Utah"> Utah</option>
+              <option value="Vermont"> Vermont</option>
+              <option value="Virginia"> Virginia</option>
+              <option value="Washington"> Washington</option>
+              <option value="West Virginia"> West Virginia</option>
+              <option value="Wisconsin"> Wisconsin</option>
+              <option value="Wyoming"> Wyoming</option>
+            </select>
+          </div>
+          <div>
+            <label for="inputZip" class="form-label">Zip</label>
+            <input
+              type="text"
+              class="form-control mb-3"
+              id="inputZip"
+              name="zipCode"
+            />
+          </div>
+          <div>
+            <!-- Bathroom Amenities -->
+            <div class="row ml-2">
+              <div class="col-md-4">
                 <div>
-                  <textarea
-                    id="review"
-                    class="mt-3 mb-3"
-                    rows="7"
-                    cols="50"
-                    name="review"
-                    placeholder="My bathroom expierience was...."
-                  ></textarea>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="changingStation"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Changing Station
+                  </label>
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="feminineProducts"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Feminine Products
+                  </label>
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="genderNeutral"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Gender Neutral
+                  </label>
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="toiletPaper"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Toilet Paper
+                  </label>
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="multipleStalls"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Multiple Stalls
+                  </label>
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="airDryer"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Air Dryer
+                  </label>
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="fancy"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Fancy
+                  </label>
                 </div>
               </div>
+              <div class="col-md-4">
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="familyFriendly"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Family Friendly
+                  </label>
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="motionSensors"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Motion Sensors
+                  </label>
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="handTowels"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Hand Towels
+                  </label>
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="handSoap"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Hand Soap
+                  </label>
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="clean"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Clean
+                  </label>
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="keyRequired"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Key Required
+                  </label>
+                </div>
+                <div>
+                  <input
+                    class="form-check-input"
+                    type="checkbox"
+                    id="gridCheck"
+                    name="payingCustomer"
+                    value="true"
+                  />
+                  <label class="form-check-label" for="gridCheck">
+                    Purchase Required
+                  </label>
+                </div>
+              </div>
+              <div>
+                <textarea
+                  id="review"
+                  class="mt-3 mb-3"
+                  rows="7"
+                  cols="50"
+                  name="review"
+                  placeholder="My bathroom expierience was...."
+                ></textarea>
+              </div>
             </div>
-            <div>
-              <div class="submitReview">
-              <select id="example-movie">
+          </div>
+          <div>
+            <div class="submitReview">
+              <h4>Give this bathroom a star rating</h4>
+              <select id="example-css">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -319,16 +323,13 @@
               </select>
               <br />
               <div>
-              <button
-                type="submit"
-                class="btn btn-primary mt-4 mb-4"
-              >
-                Submit Review
-              </button>
-              </div>
+                <button type="submit" class="btn btn-primary mt-4 mb-4">
+                  Submit Review
+                </button>
               </div>
             </div>
-          </form>
+          </div>
+        </form>
       </div>
     </div>
 
@@ -338,8 +339,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js"></script>
     <script type="text/javascript">
       $(function() {
-        $("#example-movie").barrating("show", {
-          theme: "bars-movie",
+        $("#example-css").barrating("show", {
+          theme: "css-stars",
         });
       });
     </script>
