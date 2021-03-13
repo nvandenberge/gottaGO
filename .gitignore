@@ -1,4 +1,7 @@
 node_modules/
 .env
 .DS_Store
-config.json
+config/config.json
+.eslintignore
+.eslinkrc.json
+.travis.yml
