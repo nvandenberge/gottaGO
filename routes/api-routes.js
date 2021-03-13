@@ -69,7 +69,11 @@ module.exports = function(app) {
 
   // Route for logging user out
   app.get("/logout", (req, res) => {
-    req.logout();
+    try {
+      req.logout();
+    } catch (e) {
+      console.error(e);
+    }
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
