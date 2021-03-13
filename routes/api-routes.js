@@ -10,7 +10,7 @@ module.exports = function(app) {
     // Sending back a password, even a hashed password, isn't a good idea
     res.json({
       email: req.user.email,
-      id: req.user.id
+      id: req.user.id,
     });
   });
 
@@ -20,12 +20,12 @@ module.exports = function(app) {
   app.post("/api/signup", (req, res) => {
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
     })
       .then(() => {
         res.redirect(307, "/api/login");
       })
-      .catch(err => {
+      .catch((err) => {
         res.status(401).json(err);
       });
   });
@@ -52,19 +52,17 @@ module.exports = function(app) {
       keyRequired: req.body.keyRequired,
       payingCustomer: req.body.payingCustomer,
       review: req.body.review,
-    })
-      .then(() => {
-        res.redirect("/members");
-      })
+    }).then(() => {
+      res.redirect("/members");
+    });
   });
 
   app.get("/api/results/:zipCode", (req, res) => {
     db.Review.findAll({
-      where: {zipCode: zipCode || ''} 
-    })
-      .then(() => {
-        res.redirect("/members");
-      })
+      where: { zipCode: zipCode || "" },
+    }).then(() => {
+      res.redirect("/members");
+    });
   });
 
   // Route for logging user out
@@ -83,7 +81,7 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id
+        id: req.user.id,
       });
     }
   });
