@@ -1,13 +1,10 @@
-
-
-form.signup,
-form.login {
-  margin-top: 50px;
+.loginLogo {
+  flex-direction: column;
 }
 
-form.signup {
-  padding-left: 25px;
-  border-left: solid 2px black;
+form.login {
+  border-right: solid 2px black;
+  margin-right: 40px;
 }
 
 #review-form {
@@ -24,7 +21,7 @@ header {
 #headerText {
   text-align: center;
   margin-bottom: 100px;
-} 
+}
 
 .rateSection,
 .findSection {
@@ -43,8 +40,6 @@ header {
 .btn {
   background-color: #663300;
 }
-
-
 
 #findText,
 #reviewText {
@@ -112,11 +107,15 @@ header {
   font-size: small;
 }
 
-/* Apply this styling when screen size is smaller than 990px */
+#results-logout {
+  position: fixed;
+  float: left;
+}
+
+
 @media screen and (max-width: 990px) {
   form.signup {
     padding: 0;
-    border: none;
   }
 
   .findSection {
@@ -137,12 +136,21 @@ header {
   }
 }
 
-#results-logout {
-  position: fixed;
-  float: left;
-}
-
+/* Apply this styling when screen size is smaller than 990px */
 @media screen and (max-width: 768px) {
+  form.login {
+    border-right: none;
+    margin-bottom: 40px;
+  }
+
+  .formSignup {
+    border-top: 2px solid black;
+  }
+
+  .formSignup h2 {
+    margin-top: 30px;
+  }
+
   .bathroomOptions {
     margin-left: 20px;
   }

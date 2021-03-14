@@ -1,69 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>gottaGO-Login/Signup</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link href="stylesheets/style.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <title>gottaGO-Login/Signup</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-  <link href="stylesheets/style.css" rel="stylesheet">
-</head>
-
-<body>
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header"></div>
       </div>
-    </div>
-  </nav>
-  <div class="container">
-    <div class="row">
-      <header>
-        <div>
-          <img src="/img/batman.png" alt="fake batman holding a plunger">
+    </nav>
+    <main class="container">
+      <div class="row loginLogo">
+        <header>
+          <div>
+            <img src="/img/batman.png" alt="fake batman holding a plunger" />
+          </div>
+        </header>
+        <div id="headerText">its like Yelp....but for toliets</div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>Login</h2>
+          <form class="login mt-5">
+            <div class="form-group">
+              <label for="emailInput">Email</label>
+              <input
+                type="email"
+                class="form-control w-75"
+                id="login-email"
+                placeholder="Email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="passwordInput">Password</label>
+              <input
+                type="password"
+                class="form-control w-75"
+                id="login-password"
+                placeholder="Password"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+          </form>
         </div>
-      </header>
-      <div id="headerText">its like Yelp....but for toliets</div>
-    </div>
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Login</h2>
-        <form class="login">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" id="login-email" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="login-password" placeholder="Password">
-          </div>
-          <button type="submit" class="btn btn-primary">Login</button>
-        </form>
+        <div class="col-md-6 formSignup">
+          <h2>Sign Up</h2>
+          <form class="signup mt-5">
+            <div class="form-group">
+              <label for="emailInput">Email</label>
+              <input
+                type="email"
+                class="form-control w-75"
+                id="signup-email"
+                placeholder="Email"
+              />
+            </div>
+            <div class="form-group">
+              <label for="passwordInput">Password</label>
+              <input
+                type="password"
+                class="form-control w-75"
+                id="signup-password"
+                placeholder="Password"
+              />
+            </div>
+            <div
+              style="display: none"
+              id="alert"
+              class="alert alert-danger"
+              role="alert"
+            >
+              <span
+                class="glyphicon glyphicon-exclamation-sign"
+                aria-hidden="true"
+              ></span>
+              <span class="sr-only">Error:</span> <span class="msg"></span>
+            </div>
+            <button type="submit" class="btn btn-primary mb-4">Sign Up</button>
+          </form>
+        </div>
       </div>
-      <div class="col-md-6">
-        <h2>Sign Up</h2>
-        <form class="signup">
-          <div class="form-group">
-            <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" id="signup-email" placeholder="Email">
-          </div>
-          <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="signup-password" placeholder="Password">
-          </div>
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span> <span class="msg"></span>
-          </div>
-          <button type="submit" class="btn btn-primary">Sign Up</button>
-        </form>
-      </div>
-    </div>
-  </div>
+    </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/login.js"></script>
-
-</body>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+  </body>
 </html>
