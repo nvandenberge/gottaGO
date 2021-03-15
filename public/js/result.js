@@ -2,7 +2,6 @@ $(document).ready(() => {
     const refineBtn = $("#refineBtn");
 
     refineBtn.on("click", (e) => {
-        // e.preventDefault();
         const zipCode = $("#zipInput").val();
         if (zipCode.length !== 5) {
             $("#inputError").empty();
