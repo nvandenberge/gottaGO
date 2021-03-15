@@ -6,7 +6,7 @@ $(document).ready(() => {
   const signUpForm = $("form.signup");
   const signupEmail = $("input#signup-email");
   const signupPassword = $("input#signup-password");
-
+  
   // When the form is submitted, we validate there's an email and password entered
   loginForm.on("submit", event => {
     event.preventDefault();
@@ -35,9 +35,6 @@ $(document).ready(() => {
         window.location.replace("/members");
         // If there's an error, log the error
       })
-      .catch(err => {
-        console.log(err);
-      });
   }
    // When the signup button is clicked, we validate the email and password are not blank
    signUpForm.on("submit", event => {
@@ -72,7 +69,7 @@ $(document).ready(() => {
   }
 
   function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
+    $("#signUpAlert .msg").text('Please enter a valid email address');
+    $("#signUpAlert").fadeIn(500);
   }
 });
