@@ -9,7 +9,6 @@ $(document).ready(() => {
             $("#inputError").text("Zip code must be 5 numbers, please try again");
             $("#zipInput").val("");
         } else {
-            console.log("entry is valid")
             $("#inputError").empty();
             $("#zipInput").val("");
             window.location.replace(`/results?zipCode=${zipCode}`);

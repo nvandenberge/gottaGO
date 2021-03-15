@@ -1,19 +1,29 @@
 $(document).ready(() => {
-  // Getting references to our form and inputs
-  // When the form is submitted, we validate there's an email and password entered
   const reviewForm = $("#reviewForm");
   reviewForm.on("submit", (event) => {
     event.preventDefault();
-    const reviewData = $("#reviewForm")
+    // Validation to ensure zipCode length equals 5
+    if ($("#inputZip").val().length !== 5) {
+      console.log("zipLength ==", $("#inputZip").length)
+      zipError();
+    } else {
+      $("#zipError").empty();
+      // Creating array from all form input values to POST to DB
+      const reviewData = $("#reviewForm")
       .serializeArray()
       .reduce(function(obj, item) {
         obj[item.name] = item.value;
         return obj;
       }, {});
-
-    console.log("reviewData===", reviewData);
-    addReview(reviewData);
+      // console.log("reviewData===", reviewData);
+      addReview(reviewData);
+    }
   });
+
+  function zipError() {
+      $("#zipError").empty();
+      $("#zipError").text("Zip code must be 5 numbers, please try again");
+  }
 
   function addReview(reviewData) {
     $.post("/api/review", reviewData)
