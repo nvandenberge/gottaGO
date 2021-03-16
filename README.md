@@ -63,7 +63,8 @@ https://murmuring-dawn-63159.herokuapp.com/
 
 ## Snippet
 
-![image](https://user-images.githubusercontent.com/73912705/111084444-ca862480-84e8-11eb-8614-c8b2417e9954.png)
-![image](https://user-images.githubusercontent.com/73912705/111084461-dd98f480-84e8-11eb-8d98-b8c022ad3dce.png)
-![image](https://user-images.githubusercontent.com/73912705/111084483-f0132e00-84e8-11eb-99c1-951f63088205.png)
-![image](https://user-images.githubusercontent.com/73912705/111084496-04efc180-84e9-11eb-9a53-f6bd22982422.png)
+![image](https://user-images.githubusercontent.com/73912705/111243320-42cb1380-85d7-11eb-8fd1-e7b82f028b32.png)
+![image](https://user-images.githubusercontent.com/73912705/111243397-6726f000-85d7-11eb-8d6e-c3f70b87b681.png)
+![image](https://user-images.githubusercontent.com/73912705/111243495-90478080-85d7-11eb-92ba-2111ed52648c.png)
+![image](https://user-images.githubusercontent.com/73912705/111243565-a8b79b00-85d7-11eb-9dab-fc872709c0a6.png)
+
