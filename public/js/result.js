@@ -1,4 +1,3 @@
-$(document).ready(() => {
     const refineBtn = $("#refineBtn");
 
     refineBtn.on("click", (e) => {
@@ -13,7 +12,6 @@ $(document).ready(() => {
             window.location.replace(`/results?zipCode=${zipCode}`);
         }
     })
-});
 
 
 
