@@ -1,20 +1,29 @@
-   <nav class="navbar navbar-default">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/logout" id="results-logout">
-          Logout
+<style>
+    body {
+        background: url(./img/toilet-paper2.jpg);
+        background-size: 100% 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
+<nav class="navbar navbar-default navbar-nav ml-auto navbar-secondary" style="background-color: #8f9192;">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="welcome.html" style="color: #000000;"><u>Home</u></a>
+        <a class="navbar-brand " href="/logout" id="results-logout" style="color: #000000;">
+            <u>Logout</u>
         </a>
-      </div>
-    </nav>
+    </div>
+</nav>
 <header class="header">
-    <h1 class="mt-3 mb-4">Find a bathroom</h1>
+    <h1 class="mt-3 mb-4 text-white">Find a bathroom</h1>
 </header>
 <main class="container">
     <div class="row resultsDiv">
         <div class="searchDiv">
-            <p>Search by zip code</p>
+            <p class="text-white">Search by zip code</p>
             <p id="inputError" class="text-danger"></p>
-            <input type="number" class="form-control text-center" id="zipInput" placeholder="21230" />
-            <br>
+            <input type="text" class="form-control text-center" id="zipInput" placeholder="12345" />
+            <br />
             <button type="button" class="btn btn-primary" id="refineBtn">
                 <img src="https://img.icons8.com/ultraviolet/25/000000/toilet-paper.png" />
                 Refine
