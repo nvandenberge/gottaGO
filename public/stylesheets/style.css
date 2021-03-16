@@ -192,6 +192,14 @@ header {
   #findBtn {
     margin-bottom: 50px;
   }
+
+  .resultsContainer {
+    min-height: 100vh;
+  }
+
+  .resultCard {
+    margin: 0 20px;
+  }
 }
 
 /* Gets rid of the counter arrows in number type inputs */

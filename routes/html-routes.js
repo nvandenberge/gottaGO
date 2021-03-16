@@ -33,8 +33,9 @@ module.exports = function(app) {
     if (!req.user) {
       res.redirect("/login");
     }
-    const zipCode = req.query.zipCode;
-    console.log("req.params ==", req.params);
+    let zipCode;
+    req.query.zipCode === undefined ? zipCode = '00000' : zipCode = req.query.zipCode;
+    // console.log("req.params ==", req.params);
     console.log("zipCode ===", zipCode);
     const reviewData = await db.Review.findAll({
       where: { zipCode: zipCode || "" },
