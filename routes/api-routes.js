@@ -61,7 +61,7 @@ module.exports = function(app) {
 
   app.get("/api/results/:zipCode", (req, res) => {
     db.Review.findAll({
-      where: { zipCode: zipCode || "" },
+      where: { zipCode: zipCode || " " },
     }).then(() => {
       res.redirect("/members");
     });
