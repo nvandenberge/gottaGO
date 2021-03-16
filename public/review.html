@@ -128,13 +128,14 @@
           <div>
             <label for="inputZip" class="form-label">Zip</label>
             <input
-              type="text"
+              type="number"
               class="form-control mb-3"
               id="inputZip"
               name="zipCode"
               required="true"
             />
           </div>
+          <p id="zipError" class="text-danger"></p>
           <div>
             <!-- Bathroom Amenities -->
             <div class="row ml-2">
@@ -313,7 +314,7 @@
               <div>
                 <textarea
                   id="review"
-                  class="mt-3 mb-3"
+                  class="mt-3 mb-3 p-2"
                   rows="7"
                   cols="50"
                   name="review"
