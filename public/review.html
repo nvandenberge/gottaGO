@@ -14,17 +14,24 @@
       href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="stylesheets/css-stars.css" />
+    <style>
+      body {
+        background: url(./img/toilet-paper2.jpg);
+        background-size: 100% 100%;
+      }
+    </style>
   </head>
 
   <body>
-    <nav class="navbar navbar-default">
-      <div class="navbar-header">
-        <a class="navbar-brand" href="/logout">
-          Logout
+    <nav class="navbar navbar-default navbar-nav ml-auto navbar-secondary" style="background-color: #8f9192;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="welcome.html" style="color: #000000;"><u>Home</u></a>
+        <a class="navbar-brand" href="/logout" style="color: #000000;"><u>Logout</u>
+          
         </a>
       </div>
     </nav>
-    <div class="container reviewPage">
+    <div class="container reviewPage" id="form">
       <div class="row">
         <form class="row" id="reviewForm">
           <h2 class="mt-3 mb-4">Write Your Review</h2>
@@ -37,6 +44,7 @@
             id="inputAddress"
             placeholder="Business Name"
             name="locationName"
+            required="true"
           />
           <div>
             <label for="inputAddress2" class="form-label">Address</label>
@@ -46,6 +54,7 @@
               id="inputAddress2"
               placeholder="1234 Main St"
               name="address"
+              required="true"
             />
           </div>
           <div>
@@ -55,14 +64,15 @@
               class="form-control mb-3 w-75"
               id="inputCity"
               name="city"
+              required="true"
             />
           </div>
           <div id="inputState mb-3">
             <label for="inputState" class="form-label">State</label>
             <br />
             <!--States-->
-            <select id="inputState" class="form-select mb-3" name="state">
-              <option selected>Choose your State</option>
+            <select id="inputState" class="form-select mb-3" name="state" required>
+              <option value="" selected>Choose your State</option>
               <option value="Alabama"> Alabama</option>
               <option value="Alaska"> Alaska</option>
               <option value="Arizona"> Arizona</option>
@@ -122,6 +132,7 @@
               class="form-control mb-3"
               id="inputZip"
               name="zipCode"
+              required="true"
             />
           </div>
           <div>
@@ -314,7 +325,7 @@
           <div>
             <div class="submitReview">
               <h4>Give this bathroom a star rating</h4>
-              <select id="example-css" name="starRating">
+              <select id="example-css" name="starRating" required="true">
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>

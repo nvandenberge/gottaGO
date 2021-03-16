@@ -4,28 +4,39 @@
     <title>gottaGO-Login/Signup</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
     <link href="stylesheets/style.css" rel="stylesheet" />
+    <style>
+      body {
+        background: url(./img/toilet-paper2.jpg);
+        background-size: 100% 100%;
+      }
+    </style>
   </head>
 
   <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <div class="navbar-header"></div>
-      </div>
-    </nav>
     <main class="container">
       <div class="row loginLogo">
         <header>
           <div>
-            <img src="/img/batman.png" alt="fake batman holding a plunger" />
+            <img
+              src="/img/batman.png"
+              alt="fake batman holding a plunger"
+              id="batman"
+            />
+            <div id="headerText" class="text-white">
+              it's like Yelp....but for toliets
+            </div>
           </div>
         </header>
-        <div id="headerText">its like Yelp....but for toliets</div>
+        <!-- <div id="headerText">its like Yelp....but for toliets</div> -->
       </div>
       <div class="row">
-        <div class="col-md-6">
-          <h2>Login</h2>
+        <div class="col-md-6" id="login">
+          <h2><u>Login</u></h2>
           <form class="login mt-5">
             <div class="form-group">
               <label for="emailInput">Email</label>
@@ -48,8 +59,8 @@
             <button type="submit" class="btn btn-primary">Login</button>
           </form>
         </div>
-        <div class="col-md-6 formSignup">
-          <h2>Sign Up</h2>
+        <div class="col-md-6 formSignup" id="signup">
+          <h2><u>Sign Up</u></h2>
           <form class="signup mt-5">
             <div class="form-group">
               <label for="emailInput">Email</label>
