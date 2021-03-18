@@ -1,6 +1,28 @@
-a.left
-{
-    position: relative;
+/* STYLING FOR ALL PAGES */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background: url(../img/toilet-paper2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#navSelector {
+  background-color: #e1e1e1;
+  color: #4fc8ce;
+}
+
+/* Navbar hover underline effect, left -> right  */
+a.left {
+  position: relative;
 }
 
 a.left:before {
@@ -18,4 +40,29 @@ a.left:before {
 a.left:hover:before {
   visibility: visible;
   width: 100%;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#batman {
+  width: 100%;
+  height: auto;
+}
+
+/* Gets rid of the counter arrows for zipCode inputs */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
 }

@@ -1,24 +1,9 @@
-html,
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px;
-  overflow-x: hidden;
-  background: url(../img/toilet-paper2.jpg);
-  background-size: 100% 100%;
-}
-
+/* STYLING FOR REVIEW PAGE */
 #form {
   width: 50%;
   background-color: rgb(247, 248, 246);
   border-style: solid;
   border-width: 5px;
-}
-
-#navSelector {
-  background-color: #E1E1E1;
-  color: #4FC8CE;
 }
 
 .reviewPage {
@@ -58,25 +43,12 @@ body {
 }
 
 @media screen and (max-width: 990px) {
-    #form {
-      width: 100%;
-    }
-
-    #reviewForm {
-      padding-left: 30px;
-      width: 100%;
-    }
+  #form {
+    width: 100%;
   }
 
-  /* Gets rid of the counter arrows for zipCode inputs */
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type="number"] {
-  -moz-appearance: textfield;
+  #reviewForm {
+    padding-left: 30px;
+    width: 100%;
+  }
 }
