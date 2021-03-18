@@ -1,0 +1,84 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background: url(../img/toilet-paper2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#navSelector {
+  background-color: #d3d3d3;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#zipInput {
+  max-width: 175px;
+}
+
+#refineBtn {
+  max-width: 150px;
+  margin-bottom: 25px;
+  padding: 8px;
+}
+
+.card {
+  border: none;
+}
+
+.address {
+  font-size: small;
+}
+
+.searchDiv,
+.resultsDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.resultCard {
+  border: 1px black solid;
+  max-width: 500px;
+  border-radius: 5px;
+  min-height: 200px;
+  background-color: white;
+}
+
+/* Apply this styling when screen size is smaller than 768px */
+@media screen and (max-width: 768px) {
+  .bathroomOptions {
+    margin-left: 20px;
+  }
+
+  .resultsContainer {
+    min-height: 100vh;
+  }
+
+  .resultCard {
+    margin: 0 15px;
+  }
+}
+
+/* Gets rid of the counter arrows for zipCode inputs */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
