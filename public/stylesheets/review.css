@@ -1,0 +1,81 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background: url(../img/toilet-paper2.jpg);
+  background-size: 100% 100%;
+}
+
+#form {
+  width: 50%;
+  background-color: rgb(247, 248, 246);
+  border-style: solid;
+  border-width: 5px;
+}
+
+#navSelector {
+  background-color: #d3d3d3;
+}
+
+.reviewPage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#reviewForm {
+  max-width: 550px;
+  flex-direction: column;
+}
+
+#review {
+  width: 95%;
+}
+
+#review-form {
+  padding-bottom: 50px;
+}
+
+.form-label {
+  margin-bottom: 0;
+}
+
+#inputZip,
+#zipInput {
+  max-width: 175px;
+}
+
+#inputState {
+  height: 36px;
+  border-radius: 3px;
+  max-width: 175px;
+  padding: 6px;
+}
+
+@media screen and (max-width: 990px) {
+    #form {
+      width: 100%;
+    }
+
+    #reviewForm {
+      padding-left: 30px;
+      width: 100%;
+    }
+  }
+
+  /* Gets rid of the counter arrows for zipCode inputs */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

@@ -1,4 +1,5 @@
-html,body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -15,24 +16,15 @@ form.login {
   margin-right: 40px;
 }
 
-#review-form {
+/* #review-form {
   padding-bottom: 50px;
-}
+} */
 
-#form {
+/* #form {
   width: 50%;
   background-color: rgb(247, 248, 246);
   border-style: solid;
   border-width: 5px;
-}
-
-/* #welcome {
-  width: 60%;
-  background-color: rgb(247, 248, 246);
-  border-style: solid;
-  border-width: 5px;
-  margin-top: 1px;
-  min-height: 100vh;
 } */
 
 #login {
@@ -93,23 +85,23 @@ header {
   max-width: 500px;
 } */
 
-#review {
+/* #review {
   width: 95%;
-}
+} */
 
-#reviewForm {
+/* #reviewForm {
   max-width: 550px;
   flex-direction: column;
-}
+} */
 
-.reviewPage {
+/* .reviewPage {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
+} */
 
-#inputZip,
+/* #inputZip,
 #zipInput {
   max-width: 175px;
 }
@@ -119,7 +111,7 @@ header {
   border-radius: 3px;
   max-width: 175px;
   padding: 6px;
-}
+} */
 
 #refineBtn {
   max-width: 150px;
@@ -127,9 +119,9 @@ header {
   padding: 8px;
 }
 
-.form-label {
+/* .form-label {
   margin-bottom: 0;
-}
+} */
 
 .resultCard {
   border: 1px black solid;
@@ -159,17 +151,17 @@ header {
   form.signup {
     padding: 0;
   }
-  #form {
+  /* #form {
     width: 100%;
-  }
+  } */
   .findSection {
     margin-top: 25px;
   }
 
-  #reviewForm {
+  /* #reviewForm {
     padding-left: 30px;
     width: 100%;
-  }
+  } */
 
   .searchDiv {
     margin-bottom: 30px;
@@ -204,7 +196,7 @@ header {
   }
 }
 
-/* Gets rid of the counter arrows in number type inputs */
+/* Gets rid of the counter arrows for zipCode inputs */
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -213,6 +205,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
