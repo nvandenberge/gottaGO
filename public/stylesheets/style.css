@@ -113,23 +113,23 @@ header {
   padding: 6px;
 } */
 
-#refineBtn {
+/* #refineBtn {
   max-width: 150px;
   margin-bottom: 25px;
   padding: 8px;
-}
+} */
 
 /* .form-label {
   margin-bottom: 0;
 } */
 
-.resultCard {
+/* .resultCard {
   border: 1px black solid;
   max-width: 500px;
   border-radius: 5px;
   min-height: 200px;
   background-color: white;
-}
+} */
 
 .searchDiv,
 .resultsDiv {
@@ -183,17 +183,17 @@ header {
     margin-top: 30px;
   }
 
-  .bathroomOptions {
+  /* .bathroomOptions {
     margin-left: 20px;
-  }
-
+  } */
+/* 
   .resultsContainer {
     min-height: 100vh;
   }
 
   .resultCard {
     margin: 0 15px;
-  }
+  } */
 }
 
 /* Gets rid of the counter arrows for zipCode inputs */
