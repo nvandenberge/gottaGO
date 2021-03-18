@@ -1,0 +1,76 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
+  background: url(../img/toilet-paper2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.loginLogo {
+  flex-direction: column;
+}
+
+form.login {
+  border-right: solid 2px black;
+  margin-right: 40px;
+}
+
+#login {
+  background-color: white;
+  border-width: 3px;
+  border-bottom: solid;
+  border-top: solid;
+  border-left: solid;
+}
+
+#signup {
+  background-color: white;
+  border-width: 3px;
+  border-bottom: solid;
+  border-top: solid;
+  border-right: solid;
+}
+
+#batman {
+  width: 100%;
+  height: auto;
+  border-radius: 3px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#headerText {
+  margin-bottom: 60px;
+}
+
+/* Apply this styling when screen size is smaller than 990px */
+@media screen and (max-width: 990px) {
+  form.signup {
+    padding: 0;
+  }
+}
+
+/* Apply this styling when screen size is smaller than 768px */
+@media screen and (max-width: 768px) {
+  form.login {
+    border-right: none;
+    margin-bottom: 40px;
+  }
+
+  .formSignup {
+    border-top: 2px solid black;
+  }
+
+  .formSignup h2 {
+    margin-top: 30px;
+  }
+}
