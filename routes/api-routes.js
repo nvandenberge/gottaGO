@@ -54,6 +54,7 @@ module.exports = function(app) {
       payingCustomer: req.body.payingCustomer,
       review: req.body.review,
       starRating: req.body.starRating,
+      UserId: req.user.id
     }).then(() => {
       res.redirect("/members");
     });
@@ -64,6 +65,17 @@ module.exports = function(app) {
       where: { zipCode: zipCode || " " },
     }).then(() => {
       res.redirect("/members");
+    });
+  });
+
+  app.get("/api/account", (req, res) => {
+    db.Review.findAll({
+      where: { UserId: req.user.id},
+    }).then((results) => {
+      console.log("results ==", results)
+      res.json({
+        data: results
+      })
     });
   });
 

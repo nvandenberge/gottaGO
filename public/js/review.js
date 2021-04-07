@@ -28,14 +28,15 @@ $(document).ready(() => {
   function addReview(reviewData) {
     $.post("/api/review", reviewData)
       .then(() => {
+        console.table(reviewData)
         window.location.replace("/members");
         // If there's an error, log the error
       })
-      .catch(handleLoginErr);
+      // .catch(handleLoginErr);
   }
 
-  function handleLoginErr(err) {
-    $("#alert .msg").text(err.responseJSON);
-    $("#alert").fadeIn(500);
-  }
+  // function handleLoginErr(err) {
+  //   $("#alert .msg").text(err.responseJSON);
+  //   $("#alert").fadeIn(500);
+  // }
 });

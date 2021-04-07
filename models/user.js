@@ -34,8 +34,8 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   User.associate = function(models) {
-    User.belongsToMany(models.Review, {
-      through: 'UserId'
+    User.hasMany(models.Review, {
+      onDelete: "cascade"
     });
   };
   return User;

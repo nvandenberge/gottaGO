@@ -26,6 +26,13 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/welcome.html"));
   });
 
+  // app.get("/account", (req, res) => {
+  //   if (!req.user) {
+  //     res.redirect("/login");
+  //   }
+  //   res.sendFile(path.join(__dirname, "../public/account.html"));
+  // });
+
   app.get("/review", (req, res) => {
     if (!req.user) {
       res.redirect("/login");
@@ -47,11 +54,17 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/account", (req, res) => {
+  app.get(`/account`, async (req, res) => {
     if (!req.user) {
       res.redirect("/login");
     }
-    res.sendFile(path.join(__dirname, "../public/account.html"));
+    let UserId = req.user.id;
+    const reviewData = await db.Review.findAll({
+      where: { UserId: UserId },
+    });
+    res.render("account", {
+      reviewData: reviewData.map((review) => review.dataValues),
+    });
   });
 
   app.get("*", function(req, res) {
