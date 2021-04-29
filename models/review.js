@@ -82,7 +82,20 @@ module.exports = function(sequelize, DataTypes) {
     },
     starRating: {
       type: DataTypes.INTEGER,
+    },
+    UserId: {
+      type: DataTypes.INTEGER,
     }
   });
+
+  Review.associate = function(models) {
+    // We're saying that a Review should belong to a User
+    // A Review can't be created without a User due to the foreign key constraint
+    Review.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
   return Review;
 };

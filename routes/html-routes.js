@@ -8,6 +8,7 @@ module.exports = function(app) {
     // If the user already has an account send them to the welcome page
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
+
   app.get("/login", (req, res) => {
     // If the user already has an account send them to the welcome page
     if (req.user) {
@@ -15,6 +16,7 @@ module.exports = function(app) {
     }
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
+
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, (req, res) => {
@@ -23,20 +25,26 @@ module.exports = function(app) {
     }
     res.sendFile(path.join(__dirname, "../public/welcome.html"));
   });
+
+  // app.get("/account", (req, res) => {
+  //   if (!req.user) {
+  //     res.redirect("/login");
+  //   }
+  //   res.sendFile(path.join(__dirname, "../public/account.html"));
+  // });
+
   app.get("/review", (req, res) => {
     if (!req.user) {
       res.redirect("/login");
     }
     res.sendFile(path.join(__dirname, "../public/review.html"));
   });
+
   app.get("/results", async (req, res) => {
     if (!req.user) {
       res.redirect("/login");
     }
     let zipCode;
-    req.query.zipCode === undefined ? zipCode = '00000' : zipCode = req.query.zipCode;
-    // console.log("req.params ==", req.params);
-    console.log("zipCode ===", zipCode);
     const reviewData = await db.Review.findAll({
       where: { zipCode: zipCode || "" },
     });
@@ -45,6 +53,20 @@ module.exports = function(app) {
       reviewData: reviewData.map((review) => review.dataValues),
     });
   });
+
+  app.get(`/account`, async (req, res) => {
+    if (!req.user) {
+      res.redirect("/login");
+    }
+    let UserId = req.user.id;
+    const reviewData = await db.Review.findAll({
+      where: { UserId: UserId },
+    });
+    res.render("account", {
+      reviewData: reviewData.map((review) => review.dataValues),
+    });
+  });
+
   app.get("*", function(req, res) {
     res.redirect("/");
   });
